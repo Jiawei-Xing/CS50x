@@ -1,0 +1,67 @@
+h1
+{
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia;
+}
+
+i
+{
+    color: tomato;
+}
+
+body
+{
+    text-align: center;
+    margin: 100px;
+    background-color: #add8e6;
+}
+
+textarea
+{
+    width: 100%;
+    border:2px solid Tomato;
+}
+
+button
+{
+    background-color: #0d98ba;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 12px
+}
+
+.taxonomy
+{
+    width: 100%;
+    font-size: 15px;
+}
+
+th
+{
+    font-size: 20px;
+    font-family: Georgia;
+}
+
+footer
+{
+    width: 100%;
+    font-size: 13px;
+}
+
+table
+{
+    table-layout: fixed;
+    width: 100%;
+}
+
+td
+{
+    word-wrap: break-word;
+}
+
+hr
+{
+    border-color: LightGray;
+}

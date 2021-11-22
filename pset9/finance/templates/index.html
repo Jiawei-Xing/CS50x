@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th><th>Name</th><th>Shares</th><th>Price</th><th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set total = namespace(total = cash) %}
+            {% for row in rows %}
+                <tr>
+                    <td>{{row.symbol}}</td>
+                    <td>{{lookup(row.symbol)['name']}}</td>
+                    <td>{{row['SUM(shares)']}}</td>
+                    <td>{{lookup(row.symbol)['price'] | usd}}</td>
+                    <td>{{(row['SUM(shares)'] * lookup(row.symbol)['price']) | usd}}</td>
+                </tr>
+                {% set total.total = total.total + row['SUM(shares)'] * lookup(row.symbol)['price'] %}
+            {% endfor %}
+            <tr>
+                <td></td><td></td><td></td><th>Cash</th><td>{{cash | usd}}</td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><th>TOTAL</th><td>{{total.total | usd}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

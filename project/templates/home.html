@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/" method='post'>
+        <textarea name='genomes' rows='30' placeholder='Genome assembly numbers (one per line)'></textarea>
+        <button>Search</button>
+    </form>
+{% endblock %}

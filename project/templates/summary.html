@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th><i>D</i>omain</th><th>Count</th>
+        </tr>
+        {% for each in domain %}
+            <tr>
+                <td>{{each.domain}}</td><td>{{each['COUNT(domain)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th><i>P</i>hylum</th><th>Count</th>
+        </tr>
+        {% for each in phylum %}
+            <tr>
+                <td>{{each.phylum}}</td><td>{{each['COUNT(phylum)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th><i>C</i>lass</th><th>Count</th>
+        </tr>
+        {% for each in class1 %}
+            <tr>
+                <td>{{each.class}}</td><td>{{each['COUNT(class)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th><i>O</i>rder</th><th>Count</th>
+        </tr>
+        {% for each in order %}
+            <tr>
+                <td>{{each.order1}}</td><td>{{each['COUNT(order1)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th><i>F</i>amily</th><th>Count</th>
+        </tr>
+        {% for each in family %}
+            <tr>
+                <td>{{each.family}}</td><td>{{each['COUNT(family)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th><i>G</i>enus</th><th>Count</th>
+        </tr>
+        {% for each in genus %}
+            <tr>
+                <td>{{each.genus}}</td><td>{{each['COUNT(genus)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th><i>S</i>pecies</th><th>Count</th>
+        </tr>
+        {% for each in species %}
+            <tr>
+                <td>{{each.species}}</td><td>{{each['COUNT(species)']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

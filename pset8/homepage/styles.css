@@ -1,0 +1,49 @@
+h1
+{
+    text-align: center;
+    font-family: Georgia;
+}
+
+.toolbar
+{
+    text-align: center;
+    font-size: large;
+    font-family: Georgia;
+}
+
+.note
+{
+    text-align: center;
+}
+
+#heme
+{
+    background-color: #add8e6;
+}
+
+#flavin
+{
+    background-color: #90ee90;
+}
+
+#pyp
+{
+    background-color: yellow;
+}
+
+body
+{
+    margin: 100px;
+    background-color: #f3f3f3;
+}
+
+.img
+{
+    text-align: center;
+}
+
+footer
+{
+    text-align: center;
+    font-size: small;
+}

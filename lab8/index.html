@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            function click()
+            {
+                document.querySelector('#button1').addEventListener('click', changeButton1);
+                document.querySelector('#button2').addEventListener('click', changeButton2);
+                document.querySelector('#button3').addEventListener('click', changeButton3);
+                document.querySelector('#submit').addEventListener('click', changeText);
+            }
+
+            function changeButton1()
+            {
+                document.querySelector('#button1').style.backgroundColor = 'red';
+                document.querySelector('#feedback1').innerHTML = 'Incorrect';
+            }
+
+            function changeButton2()
+            {
+                document.querySelector('#button2').style.backgroundColor = 'red';
+                document.querySelector('#feedback1').innerHTML = 'Incorrect';
+            }
+
+            function changeButton3()
+            {
+                document.querySelector('#button3').style.backgroundColor = 'green';
+                document.querySelector('#feedback1').innerHTML = 'Correct!';
+            }
+
+            function changeText()
+            {
+                if (document.querySelector('input').value == '2')
+                {
+                    document.querySelector('input').style.backgroundColor = 'green';
+                    document.querySelector('#feedback2').innerHTML = 'Correct!';
+                }
+                else
+                {
+                    document.querySelector('input').style.backgroundColor = 'red';
+                    document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', click);
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What's 1 + 1?</h3>
+
+                <button id='button1'>0</button>
+                <button id='button2'>1</button>
+                <button id='button3'>2</button>
+
+                <p id='feedback1'></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>What's 1 + 1?</h3>
+
+                <input type='text'/>
+                <button id='submit'>Submit</button>
+
+                <p id='feedback2'></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
