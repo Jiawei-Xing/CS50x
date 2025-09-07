@@ -1,2 +1,2 @@
 # CS50x
-Introduction to Computer Science
+Assignments from Harvard online course CS50x (Introduction to Computer Science).
